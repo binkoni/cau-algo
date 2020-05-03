@@ -13,8 +13,6 @@ void sort(int* input, size_t size) {
 		bkt[i] = malloc(size * sizeof(int));
 
 	for (int i = 0; i < size; ++i) {
-		printf("bkt[%d][%d] = %d\n", input[i] / BKTCAP, bktsizes[input[i] / BKTCAP], input[i]);
-		printf("bktcnt %d\n", BKTCNT);
 		bkt[input[i] / BKTCAP][bktsizes[input[i] / BKTCAP]] = input[i];
 		++bktsizes[input[i] / BKTCAP];
 	}
